@@ -1,7 +1,7 @@
 {
   "name": "grunt-elasticsearch-bulk",
   "description": "Grunt task for working with the elasticsearch bulk api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/andrewkeig/grunt-elasticsearch-bulk",
   "author": {
     "name": "Andrew Keig",
