@@ -1,0 +1,17 @@
+[
+{ "create" : { "_index" : "role", "_type" : "role", "_id" : "r1" } },
+{
+	"name": "Administrator",
+	"created": "2014-08-06T13:51:19+0100"
+},
+{ "create" : { "_index" : "role", "_type" : "role", "_id" : "r2" } },
+{
+	"name": "Editor",
+	"created": "2014-08-06T13:51:19+0100"
+},
+{ "create" : { "_index" : "user", "_type" : "role", "_id" : "r3" } },
+{
+	"name": "Contributor",
+	"created": "2014-08-06T13:51:19+0100"
+}
+]
