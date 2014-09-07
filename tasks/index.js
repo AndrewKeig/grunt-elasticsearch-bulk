@@ -35,9 +35,9 @@ module.exports = function(grunt) {
 			if (!err) {
 				grunt.log.ok('elastic search bulk run complete.');
 			}
-
-			done();
 		});
   	});
+
+  	done();
   });
 };
