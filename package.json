@@ -38,6 +38,7 @@
     "import"
   ],
   "dependencies": {
+    "async": "^0.9.0",
     "elasticsearch": "^2.4.1",
     "lodash": "^2.4.1"
   }

@@ -2,6 +2,7 @@
 
 var _ = require('lodash');
 var elastic = require('elasticsearch');
+var async = require('async');
 
 module.exports = function(grunt) {
   grunt.registerMultiTask("elasticsearchbulk", "Grunt task for working with the elasticsearch bulk api", function() {
@@ -22,7 +23,8 @@ module.exports = function(grunt) {
 	var options = _.extend(defaults, options);
 	var client = new elastic.Client(options);
 
-  	files.forEach(function(file){
+	async.eachSeries(files, function(file, callback){
+
   		grunt.log.ok('starting elastic search bulk for ', file);
 
     	var data = grunt.file.readJSON(file);
@@ -35,9 +37,13 @@ module.exports = function(grunt) {
 			if (!err) {
 				grunt.log.ok('elastic search bulk run complete.');
 			}
-		});
-  	});
 
-  	done();
+			callback();
+		});
+  	},
+    function(err){
+    	if (err) done(false);
+    	done();
+  	});
   });
 };
