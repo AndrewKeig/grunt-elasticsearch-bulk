@@ -42,8 +42,10 @@ module.exports = function(grunt) {
 		});
   	},
     function(err){
-    	if (err) done(false);
-    	done();
+    	setInterval(function(){
+    		if (err) return done(false);
+    		done();
+    	}, 1000);
   	});
   });
 };
