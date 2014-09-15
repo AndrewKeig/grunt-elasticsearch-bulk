@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     
     elasticsearchbulk: {
-      src: {
+      files: {
         src : ['data/user.json', 'data/role.json']
       },
       options: {      
