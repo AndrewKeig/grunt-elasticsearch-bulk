@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "async": "^0.9.0",
-    "elasticsearch": "^2.4.1",
-    "lodash": "^2.4.1"
+    "elasticsearch": "^10.0.1",
+    "lodash": "^3.10.1"
   }
 }
